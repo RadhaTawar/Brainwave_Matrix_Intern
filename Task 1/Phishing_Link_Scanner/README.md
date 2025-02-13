@@ -3,7 +3,7 @@
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/RadhaTawar/Brainwave_Matrix_Intern.git]
+   git clone https://github.com/RadhaTawar/Brainwave_Matrix_Intern.git
 
 2. Navigate to the project directory:
    ```
