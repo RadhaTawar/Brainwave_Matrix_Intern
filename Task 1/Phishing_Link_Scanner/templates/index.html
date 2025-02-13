@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Link Scanner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("{{ url_for('static', filename='hacker-3480124_1280.jpg') }}");
+            background-size: 
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column; 
+            gap: 10px;
+            width: 100%;
+        }
+
+        .input-group { 
+            display: flex;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden; 
+        }
+
+        input[type="text"] {
+            background-color: #fff;
+            padding: 12px;
+            font-size: 16px;
+            border: none; 
+            outline: none;
+            flex-grow: 1; 
+            border-radius: 8px 0 0 8px; 
+            box-sizing: border-box; 
+        }
+
+        input[type="text"]:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            padding: 12px; 
+            font-size: 16px; 
+            border-radius: 0 8px 8px 0;
+            white-space: nowrap; 
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
+            padding: 12px; /* Consistent padding */
+            border-radius: 8px; /* Consistent rounded corners */
+        }
+
+        .safe {
+            color: green;
+            background-color: #e8f5e9;
+            border: 2px solid #2e7d32;
+            padding: 12px; 
+            border-radius: 8px; 
+        }
+
+        .suspicious {
+            color: red;
+            background-color: #ffebee;
+            border: 2px solid #d32f2f;
+            padding: 12px; 
+            border-radius: 8px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>PHISHING LINK SCANNER</h2>
+        <p>Enter a URL below to check for phishing indicators:</p>
+
+        <form method="POST" class="form-group">
+            <div class="input-group">
+                <input type="text" name="url" placeholder="Enter URL" required>
+                <button type="submit">Check URL</button>
+            </div>
+        </form>
+
+        {% if result %}
+            <div class="result {% if 'Suspicious' in result %}suspicious{% else %}safe{% endif %}" style="display: block;">
+                {{ result }}
+            </div>
+        {% endif %}
+    </div>
+
+</body>
+</html>
