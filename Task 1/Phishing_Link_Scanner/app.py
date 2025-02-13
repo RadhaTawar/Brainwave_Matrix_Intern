@@ -18,7 +18,7 @@ SUSPICIOUS_TLDS = {".xyz", ".top", ".club", ".online", ".site", ".bid", ".loan",
 SUSPICIOUS_CHARACTERS = {"~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+",
                          "{", "}", "[", "]", ";", "<", ">", ",", "?", "\\", "|", "-"}
 
-def analyze_url(url):
+def phishing_url(url):
     """Analyzes a URL for potential phishing indicators."""
     try:
         parsed_url = urllib.parse.urlparse(url)
@@ -55,7 +55,7 @@ def analyze_url(url):
 def index():
     if request.method == 'POST':
         url = request.form['url']
-        result = analyze_url(url)
+        result = phishing_url(url)
         return render_template('index.html', result=result)
     return render_template('index.html', result='')
 
