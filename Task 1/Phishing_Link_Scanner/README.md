@@ -23,9 +23,9 @@
    http://127.0.0.1:5000
 
 6. Result:
+   *First Enter urls then click on Check Url
    ![image](https://github.com/user-attachments/assets/40fe5377-0518-40a7-aff2-6004a5b31c68)
-
-   *First ###Enter urls then click on ###Check Url
+ 
    ![image](https://github.com/user-attachments/assets/5d14d218-03ff-41e6-bd35-85ab825d8382)
 
    *Safe Url:
