@@ -35,10 +35,15 @@
    
    ![image](https://github.com/user-attachments/assets/6fc0677e-b9a3-4371-ac7f-35ef7b4eda98)
 
-
+7. File Structure:
+   ### File Structure
+ Brainwave_Matrix_Intern/
+ ├── Task 1/
+   ├── Phishing_Link_Scanner
+     ├── static/
+         └── hacker.jpg
+     ├── templates/
+         └── index.html
+     ├── app.py
+     └── README.md
  
-
-
-   
-
-
