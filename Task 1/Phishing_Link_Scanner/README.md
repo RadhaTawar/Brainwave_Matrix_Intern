@@ -37,13 +37,14 @@
 
 7. File Structure:
    ### File Structure
- Brainwave_Matrix_Intern/
- ├── Task 1/
-   ├── Phishing_Link_Scanner
-     ├── static/
-         └── hacker.jpg
-     ├── templates/
-         └── index.html
-     ├── app.py
-     └── README.md
- 
+   ```bash
+   .
+   └───Brainwave_Matrix_Intern
+   │   └───Task 1
+   │   │   └───Phishing_Link_Scanner
+   │   │       ├───static
+   │   │       │    └───hacker.jpg
+   │   │       ├───templates
+   │   │       │    └───index.html
+   │   │       ├───app.py
+
