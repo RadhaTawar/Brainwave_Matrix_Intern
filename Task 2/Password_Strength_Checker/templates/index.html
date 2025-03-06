@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Password Strength Checker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <span class="website-name">PASSWORD STRENGTH CHECKER </span>
+            </div>
+            <div class="navbar-right">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About Us</a>
+                <a href="#" class="nav-link">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="header-text">
+                    <h1>HOW STRONG IS THIS PASSWORD?</h1>
+                    <p>This tool is for educational purposes only. It does not store or transmit your password.</p>
+                </div>
+                <div class="input-section">
+                    <div class="password-input">
+                        <input type="password" id="password" placeholder="Enter Password to Analyze">
+                        <span class="eye-icon" id="eye-icon">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <p id="cracking-message">It would take a computer to crack this password.</p>
+                </div>
+                <div id="results" style="display: none;">
+                    <div class="strength-section">
+                        <div class="strength-line">
+                            <div class="strength-label">STRENGTH:</div>
+                            <div class="strength-bar">
+                                <div id="progress"></div>
+                            </div>
+                            <div class="strength-percent"><span id="strength-percent"></span></div>
+                        </div>
+                        <div class="evaluation-line">
+                            <div class="evaluation-label">EVALUATION:</div>
+                            <div class="evaluation-text"><span id="evaluation"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="generate-section">
+                    <p id="stronger-password-text">Need a stronger password?</p>
+                    <button id="generate-button">CHECK YOUR PASSWORD STRENGTH NOW!</button>
+                </div>
+            </div>
+        </section>
+
+        <h1 class="password-report" style="display: none;">Password Report</h1>
+        <div class="tables-section">
+            <div class="properties-section">
+                <h2 class="table-name">Password Properties</h2> <table id="properties">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Value</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="cracking-section">
+                <h2 class="table-name">Brute-force Attack Cracking Time Estimate</h2>
+                <table id="cracking-times">
+                    <thead>
+                        <tr>
+                            <th>Machine</th>
+                            <th>Time</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
